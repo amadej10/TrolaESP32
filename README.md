@@ -1,5 +1,5 @@
 # TrolaESP32
-Home bus arrivals on 4*8x8 LED MATRIX display.
+Home bus arrivals on 4*8x8 LED MATRIX display.<br>
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/quEmyZB2cb8/0.jpg)](http://www.youtube.com/watch?v=quEmyZB2cb8)
 
 ## ESP32 for Arduino IDE  (C++) to get started
