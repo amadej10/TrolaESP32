@@ -6,7 +6,7 @@ Home bus arrivals on 4*8x8 LED MATRIX display.
 - [ESP32 other help](http://esp32.net/)
 - [video](https://www.youtube.com/watch?v=ZAqNKaX3LQ0&t=121s) that helped me to get going
 
-## Arduino Libraries used:
+## Arduino Libraries used
 - [MD_MAX72XX](https://github.com/MajicDesigns/MD_MAX72XX) for LED_MATRIX
 - [NTPClient](https://github.com/arduino-libraries/NTPClient) to get the time
 - [ArduinoJson](https://github.com/bblanchon/ArduinoJson) to get data from http GET request
@@ -27,3 +27,16 @@ GND     | GND
 GPIO12  | DIN
 GPIO15  | CS
 GPIO14  | CLK
+
+## Adapt for your station 
+```
+client.println("GET https://www.trola.si/[yourStationNumber]/[yourBusNumberOptional]/ HTTP/1.0");
+```
+Use [trola.si](https://www.trola.si/) or use [documentation](http://trolasi.readthedocs.io/en/latest/) to figure your station number and your http request. Try it out in [postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop) also add **params** so you get json formatted response. 
+
+key     | Value
+------- | -----------------
+Accept  | application/json
+
+Paste json result in [ArduinoJson Assistant](https://arduinojson.org/v5/assistant/) and you will get all the data you need to customize the code for your needs. Then you can use this simple [example](https://arduinojson.org/v5/example/http-client/) to understand how it works. 
+
