@@ -41,3 +41,5 @@ Accept  | application/json
 
 Paste json result in [ArduinoJson Assistant](https://arduinojson.org/v5/assistant/) and you will get all the data you need to customize the code for your needs. Then you can use this simple [example](https://arduinojson.org/v5/example/http-client/) to understand how it works. 
 
+## Problems with connecting to the ESP32 in Windows 10
+In my case the device was connected. I had the latest windows 10 driwers for the esp32 but I could not upload to the esp32. So I downgraded the [driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) for windows 7/8/8.1 it has the (default) tag, and that fixed the problem for me.
